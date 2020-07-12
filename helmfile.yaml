@@ -1,0 +1,27 @@
+#webrtc setup
+repositories:
+# To use official "stable" charts a.k.a https://github.com/helm/charts/tree/master/stable
+- name: stable
+  url: https://kubernetes-charts.storage.googleapis.com
+
+- name: jetstack
+  url: https://charts.jetstack.io
+
+- name: bitnami
+  url: https://charts.bitnami.com/bitnami
+
+releases:
+  # Published chart example
+  - name: "cluster"                            # name of this release
+    namespace: "cert-manager"                       # target namespace
+    chart: "jetstack/cert-manager"
+    createNamespace: true  # for helm >3.2
+    version: 0.15.1
+
+
+  - name: "dev"
+    namespace: "nginx"
+    chart: "bitnami/nginx-ingress-controller"
+    createNamespace: true  # for helm >3.2
+    version: 5.3.24
+# todo remove old one and make bitnami the main
