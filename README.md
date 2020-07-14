@@ -10,3 +10,4 @@ Helmfile is used to describe tech stack about setup
 
 # Requirments
 * requirments helmfile v0.119.1, helm v3.2.4, k8s v1.16.9-gke.6
+* do not forget to allow tcp and udp traffic on workers node in case of use node port
