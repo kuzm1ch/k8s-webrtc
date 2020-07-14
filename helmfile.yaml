@@ -25,3 +25,10 @@ releases:
     createNamespace: true  # for helm >3.2
     version: 5.3.24
 # todo remove old one and make bitnami the main
+
+  - name: "first"
+    namespace: "first"
+    chart: "./helm"
+    createNamespace: true  # for helm >3.2
+    values:
+      - prosody.enabled: false

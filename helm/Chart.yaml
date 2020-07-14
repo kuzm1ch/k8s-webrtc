@@ -20,6 +20,8 @@ version: 0.1.1
 # incremented each time you make changes to the application.
 appVersion: stable-4548-1
 
-dependencies:
-  - name: prosody
-    condition: prosody.enabled
+# remove due to issue with helm dep up
+# https://github.com/jitsi/docker-jitsi-meet/pull/235
+# dependencies:
+#   - name: prosody
+#     condition: prosody.enabled
